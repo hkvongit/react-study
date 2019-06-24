@@ -1,11 +1,20 @@
 import React, { Component } from 'react'
 import NavBar from "./elements/NavBar"
+import Content from  "./elements/Content"
+
+
+const initialState={
+    title:"React JS",
+    content:"Content of React",
+}
 
 export default class ButtNav extends Component {
-    state={
-        title:"React JS",
-        content:"Content of React",
+    state=initialState
+
+    HOME=()=>{
+        this.setState(initialState)
     }
+    
     JSX=()=>{
         this.setState({
             title:"JSX",
@@ -27,14 +36,18 @@ export default class ButtNav extends Component {
     render() {
         return (
             <div>
-                <button className="JSX" onClick={this.JSX}>JSX</button>
-                <button className="JS" onClick={this.JS}>JS</button>
-                <button className="VDOM" onClick={this.JSX}>VDOM</button>
                 <NavBar 
                     title={this.state.title}
-                    content={this.state.content}
                 />
-                
+                <button className="HOME" onClick={this.HOME}>HOME</button>
+                <Content
+                     content={this.state.content}
+                />
+
+                <button className="JSX" onClick={this.JSX}>JSX</button>
+                <button className="JS" onClick={this.JS}>JS</button>
+                <button className="VDOM" onClick={this.VDOM}>VDOM</button>
+
             </div>
 
         )
