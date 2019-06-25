@@ -1,5 +1,5 @@
 import React from 'react'
-import Commentary from "./Commentary"
+
 
 export default function Cards(props) {
     return (
@@ -11,17 +11,11 @@ export default function Cards(props) {
                     <div class="header">
                         Do you want to approve this comment ?
                     </div>
-                        <Commentary
-                            name={props.name} 
-                            time={props.time}
-                            comment={props.comment}
-                        />
-                    {/* <div class="meta">
-                        Friends of Veronika
-                    </div>
-                    <div class="description">
-                        Elliot requested permission to view your contact details
-                    </div> */}
+                        {props.children}
+        {/* this props.children help us to view the children props of the Cards object ,
+            here the children is the commentary 
+            ReactComponent but yoyu can use any other componet like aboutUs component to show it with ease   */}
+                  
                 </div>
                     <div class="extra content">
                     <div class="ui two buttons">

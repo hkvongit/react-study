@@ -11,7 +11,7 @@ export default function Commentary(props) {
                         <a href='/' className="author">
                             {props.name}
                         </a>
-                        <div className="metadata">
+                        <div className="metaata">
                             <span className="date">{props.time}</span> 
                         </div>
                         <div className="text">{props.comment}</div>

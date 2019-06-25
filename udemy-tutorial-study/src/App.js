@@ -1,17 +1,22 @@
 import React from 'react';
-import './App.css';
-import Commentary from './components/Commentary'
-import cards from './components/cards';
-import Cards from "./components/cards"
+
+// import Commentary from './components/Commentary'
+// import Cards from "./components/cards"
+
+import LocationPage from "./LocatonProject/index"
 
 function App() {
   return (
     <div className="App">
-      <Cards
-        name="hari"
-        time="9 pm Today"
-        comment="hai this is hari"
-      />
+      <LocationPage/>
+      {/* <div className="ui container comments">
+        <Cards>
+          <Commentary
+            name="harie"
+            time="8am Today"
+            comment="hai this is harie"/>
+        </Cards>
+      </div> */}
     </div>
   );
 }
