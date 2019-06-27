@@ -1,5 +1,5 @@
 import React from 'react'
-// import SeasonDisplay from "./SeasonDisplay"
+import SeasonDisplay from "./SeasonDisplay"
 
 // const LocationPage=()=>{
 //     window.navigator.geolocation.getCurrentPosition(
@@ -30,6 +30,7 @@ export default class LocationPage extends React.Component{
         return (
         <div>
             <h2>Location  :   {this.state.lattitude}</h2>
+            <SeasonDisplay lat={this.state.lattitude}/>
         </div>
         )
         }
